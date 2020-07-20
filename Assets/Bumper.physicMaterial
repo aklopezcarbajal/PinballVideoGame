@@ -7,8 +7,8 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bumper
-  dynamicFriction: 0.25
-  staticFriction: 0.25
-  bounciness: 0.85
+  dynamicFriction: 0.05
+  staticFriction: 0.05
+  bounciness: 1
   frictionCombine: 1
   bounceCombine: 3
