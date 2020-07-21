@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FlipperController : MonoBehaviour
 {
-    private HingeJoint hinge;
+    private Rigidbody rb;
+    private float force = 1000f;
     private string keyName;
     private bool rightFlipper = false;
     private bool leftFlipper  = false;
 
     void Start()
     {
-        hinge = GetComponent<HingeJoint>();
+        rb = GetComponent<Rigidbody>();
         if (transform.position.x < 0)
         {
             leftFlipper = true;
@@ -26,19 +27,9 @@ public class FlipperController : MonoBehaviour
 
     void Update()
     {
-        JointSpring spring = hinge.spring;
-
         if (Input.GetKey(keyName))
         {
-            float val = (leftFlipper == true ? 1f : -1f);
-            spring.spring = 10000;
-            spring.damper = 30;
-            spring.targetPosition = (-70)*val;
+            rb.AddForce(transform.forward * force, ForceMode.Acceleration);
         }
-        else
-        {
-            spring.targetPosition = 0f;
-        }
-        hinge.spring = spring;
     }
 }

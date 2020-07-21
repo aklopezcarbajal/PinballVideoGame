@@ -7,9 +7,7 @@ public class PlungerController : MonoBehaviour
     private Rigidbody ballRB;
     private bool ballReady;
     private float force;
-    private float minForce = 0f;
     private float maxForce = 10000f;
-
 
     void Start()
     {
@@ -33,12 +31,10 @@ public class PlungerController : MonoBehaviour
         if (Input.GetKey("space") && ballReady)
         {
             if (force < maxForce) 
-                force += 500f * Time.deltaTime;
+                force += 1000f * Time.deltaTime;
         }
         if (Input.GetKeyUp("space") && ballReady)
         {
-            print("Hit ball.");
-            print(force);
             ballRB.AddForce( Vector3.forward * force);
             force = 0f;
         }
