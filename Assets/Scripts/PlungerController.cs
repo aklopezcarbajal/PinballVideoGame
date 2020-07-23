@@ -31,7 +31,7 @@ public class PlungerController : MonoBehaviour
         if (Input.GetKey("space") && ballReady)
         {
             if (force < maxForce) 
-                force += 1000f * Time.deltaTime;
+                force += 1500f * Time.deltaTime;
         }
         if (Input.GetKeyUp("space") && ballReady)
         {

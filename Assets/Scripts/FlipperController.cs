@@ -29,7 +29,7 @@ public class FlipperController : MonoBehaviour
     {
         if (Input.GetKey(keyName))
         {
-            rb.AddForce(transform.forward * force, ForceMode.Acceleration);
+            rb.AddForce(transform.forward * force);
         }
     }
 }
