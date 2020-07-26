@@ -721,6 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133874088}
+  - component: {fileID: 133874089}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -742,6 +743,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133874089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133874087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27831b4e8598d145846b7329b853339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
 --- !u!1 &155940033
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +957,7 @@ GameObject:
   - component: {fileID: 203954334}
   m_Layer: 0
   m_Name: Bumper (3)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,6 +1995,7 @@ GameObject:
   - component: {fileID: 401721936}
   - component: {fileID: 401721940}
   - component: {fileID: 401721941}
+  - component: {fileID: 401721942}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2092,6 +2107,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBalls: 3
   lowerBound: -18
+--- !u!114 &401721942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401721935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83cbac89ab637347bcbb9401f130bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 133874089}
+  switchValue: 100
+  bumperValue: 50
+  slingshotValue: 30
 --- !u!1 &425056139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,7 +2324,7 @@ GameObject:
   - component: {fileID: 446443395}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2380,8 +2411,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446443394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 10}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0.5, y: 0.01, z: 10}
+  m_LocalScale: {x: 1, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 227349435}
   m_RootOrder: 0
@@ -3397,7 +3428,7 @@ GameObject:
   - component: {fileID: 709338221}
   m_Layer: 0
   m_Name: BouncyBorder
-  m_TagString: Untagged
+  m_TagString: Slingshot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4678,8 +4709,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008201942}
   m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 11.08, y: 0.5, z: -1.1}
-  m_LocalScale: {x: 0.55, y: 1, z: 5.5}
+  m_LocalPosition: {x: 11.15, y: 0.5, z: -1.2}
+  m_LocalScale: {x: 0.75, y: 1, z: 5.5}
   m_Children: []
   m_Father: {fileID: 1578905654}
   m_RootOrder: 36
@@ -4852,7 +4883,7 @@ GameObject:
   - component: {fileID: 1015365508}
   m_Layer: 0
   m_Name: BouncyBorder
-  m_TagString: Untagged
+  m_TagString: Slingshot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5039,7 +5070,7 @@ GameObject:
   - component: {fileID: 1080364149}
   m_Layer: 0
   m_Name: Switch (2)
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5052,8 +5083,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080364147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 0.5, z: 10}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 5.5, y: 0.01, z: 10}
+  m_LocalScale: {x: 1, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 227349435}
   m_RootOrder: 2
@@ -5240,7 +5271,7 @@ GameObject:
   - component: {fileID: 1155794448}
   m_Layer: 0
   m_Name: Switch (1)
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5253,8 +5284,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155794446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.5, z: 10}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 3, y: 0.01, z: 10}
+  m_LocalScale: {x: 1, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 227349435}
   m_RootOrder: 1
@@ -6306,7 +6337,7 @@ GameObject:
   - component: {fileID: 1519303986}
   m_Layer: 0
   m_Name: Bumper (2)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6589,7 +6620,7 @@ GameObject:
   - component: {fileID: 1563334028}
   m_Layer: 0
   m_Name: Bumper (1)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

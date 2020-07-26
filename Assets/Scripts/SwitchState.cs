@@ -17,10 +17,10 @@ public class SwitchState : MonoBehaviour
             isOn = false;
         else
             isOn = true;
-        print("Switch state");
-        if (isOn)
-            print("Is ON");
-        else
-            print("Is OFF");
+        //print("Switch state");
+       /// if (isOn)
+            //print("Is ON");
+        //else
+            //print("Is OFF");
     }
 }
