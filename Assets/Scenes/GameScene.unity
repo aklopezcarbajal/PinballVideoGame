@@ -1047,6 +1047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227349435}
+  - component: {fileID: 227349436}
   m_Layer: 0
   m_Name: Switchers
   m_TagString: Untagged
@@ -1075,6 +1076,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227349436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227349434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a60a7e9194ce74a939c90a8b5c4cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switches:
+  - {fileID: 446443394}
+  - {fileID: 1155794446}
+  - {fileID: 1080364147}
+  score: {fileID: 133874089}
+  switchBonus: 1000
 --- !u!1 &272462791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +2014,6 @@ GameObject:
   - component: {fileID: 401721936}
   - component: {fileID: 401721940}
   - component: {fileID: 401721941}
-  - component: {fileID: 401721942}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2034,7 +2052,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c407d2ae0c3c01c4d81b7a3a833b6166, type: 2}
+  - {fileID: 2100000, guid: cab7640698404ee49820c717b14d2141, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2071,8 +2089,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401721935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.42, y: 0.525, z: 0.91}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_LocalPosition: {x: 11.6, y: 0.505, z: 5.37}
+  m_LocalScale: {x: 1.01, y: 1.01, z: 1.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2107,20 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBalls: 3
   lowerBound: -18
---- !u!114 &401721942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401721935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83cbac89ab637347bcbb9401f130bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   score: {fileID: 133874089}
-  switchValue: 100
   bumperValue: 50
   slingshotValue: 30
 --- !u!1 &425056139
@@ -2342,6 +2347,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
+  switchOn: {r: 1, g: 0.92156863, b: 0.1372549, a: 255}
+  switchOff: {r: 0.5882353, g: 0.5882353, b: 0.003921569, a: 255}
+  score: {fileID: 133874089}
+  switchValue: 100
 --- !u!136 &446443396
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5102,6 +5111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
+  switchOn: {r: 1, g: 1, b: 0.13725491, a: 255}
+  switchOff: {r: 0.5882353, g: 0.5882353, b: 0.003921569, a: 255}
+  score: {fileID: 133874089}
+  switchValue: 100
 --- !u!136 &1080364150
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5303,6 +5316,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
+  switchOn: {r: 1, g: 1, b: 0.13725491, a: 255}
+  switchOff: {r: 0.5882353, g: 0.5882353, b: 0.003921569, a: 255}
+  score: {fileID: 133874089}
+  switchValue: 100
 --- !u!136 &1155794449
 CapsuleCollider:
   m_ObjectHideFlags: 0

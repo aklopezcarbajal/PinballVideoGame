@@ -5,22 +5,36 @@ using UnityEngine;
 public class SwitchState : MonoBehaviour
 {
     public bool isOn;
-    // Start is called before the first frame update
+
+    private Material switchMaterial;
+    public Color switchOn;
+    public Color switchOff;
+
+    public Score score;
+    public int switchValue = 100;
+
     void Start()
     {
+
         isOn = false;
+        switchMaterial = GetComponent<MeshRenderer>().material;
+        switchMaterial.color = switchOff;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        score.IncreaseScore(switchValue);
+        print("Switch");
+
         if (isOn)
+        {
             isOn = false;
+            switchMaterial.color = switchOff;
+        }
         else
+        {
             isOn = true;
-        //print("Switch state");
-       /// if (isOn)
-            //print("Is ON");
-        //else
-            //print("Is OFF");
+            switchMaterial.color = switchOn;
+        }
     }
 }
