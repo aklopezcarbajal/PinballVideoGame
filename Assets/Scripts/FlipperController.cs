@@ -10,6 +10,8 @@ public class FlipperController : MonoBehaviour
     private bool rightFlipper = false;
     private bool leftFlipper  = false;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,6 +25,8 @@ public class FlipperController : MonoBehaviour
             rightFlipper = true;
             keyName = "right";
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,6 +34,11 @@ public class FlipperController : MonoBehaviour
         if (Input.GetKey(keyName))
         {
             rb.AddForce(transform.forward * force);
+        }
+        if (Input.GetKeyDown(keyName))
+        {
+
+            audioSource.Play();
         }
     }
 }

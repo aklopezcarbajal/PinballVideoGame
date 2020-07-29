@@ -9,11 +9,15 @@ public class PlungerController : MonoBehaviour
     private float force;
     private float maxForce = 10000f;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         ballRB = GameObject.Find("Ball").GetComponent<Rigidbody>();
         ballReady = false;
         force = 0f;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +41,7 @@ public class PlungerController : MonoBehaviour
         {
             ballRB.AddForce( Vector3.forward * force);
             force = 0f;
+            audioSource.Play();
         }
         
     }
