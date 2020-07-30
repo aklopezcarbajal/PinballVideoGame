@@ -13,18 +13,22 @@ public class SwitchState : MonoBehaviour
     public Score score;
     public int switchValue = 100;
 
+    private AudioSource audioSource;
+
     void Start()
     {
-
         isOn = false;
         switchMaterial = GetComponent<MeshRenderer>().material;
         switchMaterial.color = switchOff;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         score.IncreaseScore(switchValue);
         print("Switch");
+        //audioSource.Play();
 
         if (isOn)
         {

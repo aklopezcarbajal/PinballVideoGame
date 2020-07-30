@@ -12,15 +12,12 @@ public class Ball : MonoBehaviour
     public int bumperValue = 50;
     public int slingshotValue = 30;
 
-    public AudioClip bumperHit;
-    public AudioClip borderhit;
-    public AudioClip miss;
-    private AudioSource audioSource;
+    private bool delay;
 
     void Start()
     {
         initialPosition = transform.position;
-        audioSource = GetComponent<AudioSource>();
+        delay = false;
     }
 
     void Update()
@@ -29,7 +26,10 @@ public class Ball : MonoBehaviour
         if (transform.position.z < lowerBound && maxBalls > 0)
         {
             maxBalls -= 1;
-            transform.position = initialPosition;
+            delay = true;
+            //delay
+            if(!delay)
+                transform.position = initialPosition;
         }
     }
 
@@ -39,14 +39,10 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("Bumper"))
         {
             score.IncreaseScore(bumperValue);
-            audioSource.PlayOneShot(bumperHit, 0.5f);
-            print("Bumper");
         }
         else if (collision.gameObject.CompareTag("Slingshot"))
         {
             score.IncreaseScore(slingshotValue);
-            //audioSource.PlayOneShot(hit, 0.5f);
-            print("Slingshot");
         }
     }
 }

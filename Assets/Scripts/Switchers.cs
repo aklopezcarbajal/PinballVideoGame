@@ -8,9 +8,11 @@ public class Switchers : MonoBehaviour
     public Score score;
     public int switchBonus = 1000;
 
+    private AudioSource audioSource;
+
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,6 +24,6 @@ public class Switchers : MonoBehaviour
                 return;
         }
         score.IncreaseScore(switchBonus);
-        print("Bonus!!");
+        audioSource.Play();
     }
 }
