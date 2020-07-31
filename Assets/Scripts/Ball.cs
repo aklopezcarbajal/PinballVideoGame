@@ -12,12 +12,9 @@ public class Ball : MonoBehaviour
     public int bumperValue = 50;
     public int slingshotValue = 30;
 
-    private bool delay;
-
     void Start()
     {
         initialPosition = transform.position;
-        delay = false;
     }
 
     void Update()
@@ -26,10 +23,7 @@ public class Ball : MonoBehaviour
         if (transform.position.z < lowerBound && maxBalls > 0)
         {
             maxBalls -= 1;
-            delay = true;
-            //delay
-            if(!delay)
-                transform.position = initialPosition;
+            transform.position = initialPosition;
         }
     }
 
