@@ -521,8 +521,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33156577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 0.56, z: -8}
-  m_LocalScale: {x: 0.4, y: 1, z: 5}
+  m_LocalPosition: {x: -9, y: 0.56, z: -7.9}
+  m_LocalScale: {x: 0.4, y: 1, z: 5.25}
   m_Children: []
   m_Father: {fileID: 1578905654}
   m_RootOrder: 15
@@ -806,6 +806,7 @@ RectTransform:
   m_Children:
   - {fileID: 742940144}
   - {fileID: 1368409456}
+  - {fileID: 1224319473}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2113,7 +2114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c79793e5a45d4d9833ece08df731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls: 0
+  ball: 0
+  ballText: {fileID: 0}
   lowerBound: -20
   score: {fileID: 133874089}
   bumperValue: 50
@@ -2755,7 +2757,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: efe93d64b57b67b4388a249a9a26144e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2904,7 +2906,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c407d2ae0c3c01c4d81b7a3a833b6166, type: 2}
+  - {fileID: 2100000, guid: 289ae792bc98e9545a51d843bf360e11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3116,7 +3118,7 @@ Transform:
   m_GameObject: {fileID: 401721935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.5, y: 0.505, z: 6}
-  m_LocalScale: {x: 1.01, y: 1.01, z: 1.01}
+  m_LocalScale: {x: 1, y: 1.01, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -3129,7 +3131,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401721935}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1.25
   m_Drag: 0
   m_AngularDrag: 0.01
   m_UseGravity: 1
@@ -3149,7 +3151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c79793e5a45d4d9833ece08df731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls: 0
+  ball: 0
+  ballText: {fileID: 1368409457}
   lowerBound: -20
   score: {fileID: 133874089}
   bumperValue: 50
@@ -3374,7 +3377,7 @@ Transform:
   m_GameObject: {fileID: 412639628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8, y: 0, z: -18.5}
-  m_LocalScale: {x: 0.9, y: 0.025, z: 0.9}
+  m_LocalScale: {x: 0.8, y: 0.025, z: 0.8}
   m_Children: []
   m_Father: {fileID: 227349435}
   m_RootOrder: 4
@@ -3500,8 +3503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  switchOn: {r: 1, g: 1, b: 0.19339621, a: 1}
-  switchOff: {r: 0.4509804, g: 0.39215687, b: 0, a: 255}
+  switchOn: {r: 1, g: 0.7254902, b: 0.13679248, a: 1}
+  switchOff: {r: 0.7264151, g: 0.3635055, b: 0.030838363, a: 255}
   score: {fileID: 133874089}
   switchValue: 100
 --- !u!136 &412639633
@@ -4193,7 +4196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c79793e5a45d4d9833ece08df731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls: 0
+  ball: 0
+  ballText: {fileID: 0}
   lowerBound: -20
   score: {fileID: 133874089}
   bumperValue: 50
@@ -5090,7 +5094,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c407d2ae0c3c01c4d81b7a3a833b6166, type: 2}
+  - {fileID: 2100000, guid: 289ae792bc98e9545a51d843bf360e11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5245,7 +5249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c79793e5a45d4d9833ece08df731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls: 0
+  ball: 0
+  ballText: {fileID: 0}
   lowerBound: -20
   score: {fileID: 133874089}
   bumperValue: 50
@@ -6440,7 +6445,7 @@ GameObject:
   - component: {fileID: 742940143}
   - component: {fileID: 742940142}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6459,20 +6464,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5764706, g: 0.33069825, b: 0.18823528, a: 1}
+  m_Color: {r: 0.78431374, g: 1, b: 0.99699694, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a99ce5ef2bc474742a7494fc19bae6f6, type: 3}
-    m_FontSize: 33
+    m_Font: {fileID: 12800000, guid: 8a1b6811f0d451a489b6c186b6cfe5e0, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -6503,8 +6508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193.18, y: 250.4}
-  m_SizeDelta: {x: 386.35217, y: 65}
+  m_AnchoredPosition: {x: -276.45, y: 261.21}
+  m_SizeDelta: {x: 219.80606, y: 43.370598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &747879806
 GameObject:
@@ -6629,8 +6634,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763416935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.25, y: 0, z: -18.5}
-  m_LocalScale: {x: 0.9, y: 0.025, z: 0.9}
+  m_LocalPosition: {x: 8.35, y: 0, z: -18.5}
+  m_LocalScale: {x: 0.8, y: 0.025, z: 0.8}
   m_Children: []
   m_Father: {fileID: 227349435}
   m_RootOrder: 5
@@ -6756,8 +6761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  switchOn: {r: 1, g: 1, b: 0.19339621, a: 1}
-  switchOff: {r: 0.4509804, g: 0.39215687, b: 0, a: 255}
+  switchOn: {r: 1, g: 0.7254902, b: 0.13679248, a: 1}
+  switchOff: {r: 0.7264151, g: 0.3635055, b: 0.030838363, a: 255}
   score: {fileID: 133874089}
   switchValue: 100
 --- !u!136 &763416940
@@ -7461,7 +7466,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: efe93d64b57b67b4388a249a9a26144e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8064,7 +8069,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bac17b15f43f2674c9ff7debeca4532f, type: 2}
+  - {fileID: 2100000, guid: bc42c29d08855db45a999d5019a4bc4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8499,13 +8504,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.4848096, y: 0, z: 0, w: 0.8746197}
-  m_LocalPosition: {x: 1, y: 25, z: -18}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 1, y: 23, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 58, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &973101715
 GameObject:
   m_ObjectHideFlags: 0
@@ -9300,8 +9305,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067668028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.25, y: 0.5, z: -7.5}
-  m_LocalScale: {x: 0.4, y: 1, z: 6}
+  m_LocalPosition: {x: 9.25, y: 0.5, z: -7.25}
+  m_LocalScale: {x: 0.4, y: 1, z: 6.25}
   m_Children: []
   m_Father: {fileID: 1578905654}
   m_RootOrder: 16
@@ -10736,6 +10741,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204372831}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1224319472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224319473}
+  - component: {fileID: 1224319475}
+  - component: {fileID: 1224319474}
+  m_Layer: 5
+  m_Name: GameOverText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1224319473
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224319472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 83402040}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1224319474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224319472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1224319475
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224319472}
+  m_CullTransparentMesh: 0
 --- !u!1 &1257064336
 GameObject:
   m_ObjectHideFlags: 0
@@ -11216,7 +11299,7 @@ GameObject:
   - component: {fileID: 1368409458}
   - component: {fileID: 1368409457}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BallText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11238,8 +11321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275.2, y: 175}
-  m_SizeDelta: {x: 222.24255, y: 40}
+  m_AnchoredPosition: {x: -280.1, y: 222.77}
+  m_SizeDelta: {x: 115.537674, y: 33.51109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368409457
 MonoBehaviour:
@@ -11254,26 +11337,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.9395693, b: 0.9395693, a: 1}
+  m_Color: {r: 0.78431374, g: 0.9395693, b: 0.9395693, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a99ce5ef2bc474742a7494fc19bae6f6, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: b4e046780e1424d4c99dd118059678e1, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Ball '
+  m_Text: Ball 0
 --- !u!222 &1368409458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11679,7 +11762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399783023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.25, y: 0, z: -8}
+  m_LocalPosition: {x: 7.5, y: 0, z: -7}
   m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children:
   - {fileID: 1376133118}
@@ -12338,7 +12421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c407d2ae0c3c01c4d81b7a3a833b6166, type: 2}
+  - {fileID: 2100000, guid: 289ae792bc98e9545a51d843bf360e11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14961,7 +15044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000526552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.75, y: 0, z: -8}
+  m_LocalPosition: {x: -7, y: 0, z: -7}
   m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children:
   - {fileID: 425056140}
@@ -15493,7 +15576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c407d2ae0c3c01c4d81b7a3a833b6166, type: 2}
+  - {fileID: 2100000, guid: 289ae792bc98e9545a51d843bf360e11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

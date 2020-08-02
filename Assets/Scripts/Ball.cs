@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public int balls;
+    private int MAXBALLS = 3;
+    public int ball;
+    public Text ballText;
+    private string ballStr;
     private Vector3 initialPosition;
     public float lowerBound = -20;
 
@@ -14,9 +18,11 @@ public class Ball : MonoBehaviour
 
     public GameManager gameManager;
 
+
     void Start()
     {
-        balls = 3;
+        ball = 1;
+        ballText.text = string.Concat("BALL ",ball.ToString());
         initialPosition = transform.position;
     }
 
@@ -25,8 +31,11 @@ public class Ball : MonoBehaviour
         //Reset the ball position when it exits the payfield
         if (transform.position.z < lowerBound)
         {
-            balls -= 1;
-            if (balls > 0)
+            ball += 1;
+
+            ballText.text = string.Concat("BALL ", ball.ToString());
+
+            if (ball < MAXBALLS)
                 transform.position = initialPosition;
             else
                 gameManager.GameOver();
