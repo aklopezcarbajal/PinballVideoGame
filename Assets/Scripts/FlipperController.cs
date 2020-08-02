@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlipperController : MonoBehaviour
 {
     private Rigidbody rb;
-    private float force = 1000f;
+    public float force;
     private string keyName;
     private bool rightFlipper = false;
     private bool leftFlipper  = false;

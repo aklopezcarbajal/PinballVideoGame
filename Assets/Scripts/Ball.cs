@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public int maxBalls = 3;
+    public int balls;
     private Vector3 initialPosition;
     public float lowerBound = -20;
 
@@ -12,19 +12,27 @@ public class Ball : MonoBehaviour
     public int bumperValue = 50;
     public int slingshotValue = 30;
 
+    public GameManager gameManager;
+
     void Start()
     {
+        balls = 3;
         initialPosition = transform.position;
     }
 
     void Update()
     {
         //Reset the ball position when it exits the payfield
-        if (transform.position.z < lowerBound && maxBalls > 0)
+        if (transform.position.z < lowerBound)
         {
-            maxBalls -= 1;
-            transform.position = initialPosition;
+            balls -= 1;
+            if (balls > 0)
+                transform.position = initialPosition;
+            else
+                gameManager.GameOver();
         }
+      
+           
     }
 
     //Increase score when the ball collides with bumpers and slingshots

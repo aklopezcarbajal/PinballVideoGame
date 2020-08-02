@@ -6,7 +6,7 @@ public class PlungerController : MonoBehaviour
 {
     private Rigidbody ballRB;
     private bool ballReady;
-    private float force;
+    public float force;
     private float maxForce = 10000f;
 
     private AudioSource audioSource;
@@ -35,7 +35,7 @@ public class PlungerController : MonoBehaviour
         if (Input.GetKey("space") && ballReady)
         {
             if (force < maxForce) 
-                force += 1500f * Time.deltaTime;
+                force += 2500f * Time.deltaTime;
         }
         if (Input.GetKeyUp("space") && ballReady)
         {
