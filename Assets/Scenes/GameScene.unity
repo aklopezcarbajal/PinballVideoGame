@@ -2619,7 +2619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776abe8621329c7409fd606ca31e8fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1800
+  force: 3000
 --- !u!59 &348360557
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3131,7 +3131,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401721935}
   serializedVersion: 2
-  m_Mass: 1.25
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.01
   m_UseGravity: 1
@@ -3503,8 +3503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  switchOn: {r: 1, g: 0.7254902, b: 0.13679248, a: 1}
-  switchOff: {r: 0.7264151, g: 0.3635055, b: 0.030838363, a: 255}
+  switchOn: {r: 1, g: 0.92156863, b: 0.13679248, a: 1}
+  switchOff: {r: 0.4509804, g: 0.43137255, b: 0, a: 255}
   score: {fileID: 133874089}
   switchValue: 100
 --- !u!136 &412639633
@@ -5938,6 +5938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b23b8582969094590b93d0e4b56466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverText: {fileID: 1224319474}
 --- !u!4 &688157284
 Transform:
   m_ObjectHideFlags: 0
@@ -6761,8 +6762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  switchOn: {r: 1, g: 0.7254902, b: 0.13679248, a: 1}
-  switchOff: {r: 0.7264151, g: 0.3635055, b: 0.030838363, a: 255}
+  switchOn: {r: 1, g: 0.92156863, b: 0.13679248, a: 1}
+  switchOff: {r: 0.4509804, g: 0.43137255, b: 0, a: 255}
   score: {fileID: 133874089}
   switchValue: 100
 --- !u!136 &763416940
@@ -6852,7 +6853,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763582425}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f5ea2d8b1a09bd04380f061d41d1c9f2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7453,7 +7454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776abe8621329c7409fd606ca31e8fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1800
+  force: 3000
 --- !u!82 &830740090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8044,7 +8045,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935234853}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 48f326c1bb8819643aa1ff30a0d317f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -8069,7 +8070,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc42c29d08855db45a999d5019a4bc4b, type: 2}
+  - {fileID: 2100000, guid: bac17b15f43f2674c9ff7debeca4532f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10775,8 +10776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 34}
+  m_SizeDelta: {x: 635.2411, y: 189.44818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224319474
 MonoBehaviour:
@@ -10791,26 +10792,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.78431374, g: 0.9411765, b: 0.9411765, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: b4e046780e1424d4c99dd118059678e1, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Game Over
 --- !u!222 &1224319475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13871,7 +13872,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775373682}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f5ea2d8b1a09bd04380f061d41d1c9f2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
