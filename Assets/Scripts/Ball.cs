@@ -13,8 +13,8 @@ public class Ball : MonoBehaviour
     public float lowerBound = -20;
 
     public Score score;
-    public int bumperValue = 50;
-    public int slingshotValue = 30;
+    public int bumperValue = 100;
+    public int slingshotValue = 50;
 
     public GameManager gameManager;
 
@@ -31,12 +31,12 @@ public class Ball : MonoBehaviour
         //Reset the ball position when it exits the payfield
         if (transform.position.z < lowerBound)
         {
-            ball += 1;
-
-            ballText.text = string.Concat("BALL ", ball.ToString());
-
-            if (ball < MAXBALLS)
+            if (ball <= MAXBALLS)
+            {
+                ball += 1;
+                ballText.text = string.Concat("BALL ", ball.ToString());
                 transform.position = initialPosition;
+            }
             else
                 gameManager.GameOver();
         }
