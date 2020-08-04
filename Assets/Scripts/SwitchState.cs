@@ -11,7 +11,7 @@ public class SwitchState : MonoBehaviour
     public Color switchOff;
 
     public Score score;
-    public int switchValue = 200;
+    public int switchValue;
 
     void Start()
     {
