@@ -4,7 +4,7 @@
 
 Pinball machine simulation. Developed in Unity 3D using C#.
 
-Build in WebGL. Published in Unity Connect: [Space Pinball](...).
+Build in WebGL. Published in Unity Connect: [Space Pinball](https://connect.unity.com/mg/other/space-pinball-1).
 
 ## How to play
 
